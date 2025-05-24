@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrDebateTool", "DrDebateTool\DrDebateTool.csproj", "{86DE7ECC-141B-44B3-8664-4773FEA4E0E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrDebateBin", "DrDebateBin\DrDebateBin.csproj", "{C0689E28-DC51-4A2C-B0D4-5878AE659DF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86DE7ECC-141B-44B3-8664-4773FEA4E0E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86DE7ECC-141B-44B3-8664-4773FEA4E0E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86DE7ECC-141B-44B3-8664-4773FEA4E0E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86DE7ECC-141B-44B3-8664-4773FEA4E0E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0689E28-DC51-4A2C-B0D4-5878AE659DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0689E28-DC51-4A2C-B0D4-5878AE659DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0689E28-DC51-4A2C-B0D4-5878AE659DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0689E28-DC51-4A2C-B0D4-5878AE659DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D9F3D10-04F1-4FEA-B699-7181A44CE27F}
+	EndGlobalSection
+EndGlobal
