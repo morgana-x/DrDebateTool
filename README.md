@@ -1,5 +1,5 @@
 # DrDebateTool
-Tool for extracting and repacking debate bins:
+Tool for extracting and repacking debate dats:
 + kokoro
 + nonstop
 + hanron
