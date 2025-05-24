@@ -6,11 +6,6 @@
         {
             return opcode < OpcodeNames.Count ? OpcodeNames[opcode] : "0x" + opcode.ToString("X");
         }
-
-        public static string ValToString(int i, short val)
-        {
-            return $"{GetOpcodeKeyName(i)} | {val}";
-        }
        
         // Names Sourced from BitesizeBird's
         // https://github.com/BitesizeBird/Danganronpa-Modding/blob/master/DR2%20DAT%20Opcode%20Explanations

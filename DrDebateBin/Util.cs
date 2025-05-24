@@ -7,10 +7,14 @@ namespace DrDebateBin
         {
             return short.Parse(str.Substring(str.IndexOf('|') + 1).Trim());
         }
-        public static string ReadLine(StreamReader reader)
+        public static string ValToString(object keyName, object val)// short val)
+        {
+            return $"{keyName} | {val}";
+        }
+        public static string? ReadLine(StreamReader reader)
         {
             if (reader.BaseStream.Position > reader.BaseStream.Length)
-                return "NULL END OF STREAM";
+                return null;
 
             var line = reader.ReadLine();
 
