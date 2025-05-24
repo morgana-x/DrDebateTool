@@ -10,25 +10,22 @@
             UnknownHeaderValue = reader.ReadInt16();
      
             ushort NumberOfSections = reader.ReadUInt16(); 
-            // Small note to self: Sometimes rarely, the file claims to have more sections than it has?
-            // This can cause when repacking the number of sections value written to be lower by 1,
-            // hopefully doesn't affect ingame stuff?
-            // Otherwise will have to write the purported value to text file and read it from text file
 
             SectionValueCount = (int)((reader.BaseStream.Length-4) / NumberOfSections);
             SectionValueCount &= 0xFFFE; //https://github.com/AdmiralCurtiss/HyoutaTools/blob/master/HyoutaToolsLib/DanganRonpa/Nonstop/NonstopFile.cs
             SectionValueCount /= 2; // https://github.com/AdmiralCurtiss/HyoutaTools/blob/master/HyoutaToolsLib/DanganRonpa/Nonstop/NonstopSingle.cs
-             
+
             for (int i = 0; i < NumberOfSections; i++)
                 Sections.Add(new DebateSection(reader, SectionValueCount));
         }
 
         public DebateBin(StreamReader reader)
         {
+            reader.BaseStream.Position = 0;
             UnknownHeaderValue = Util.StringToVal(Util.ReadLine(reader));
             SectionValueCount = Util.StringToVal(Util.ReadLine(reader));
 
-            while (reader.BaseStream.Position < reader.BaseStream.Length)
+            while (!reader.EndOfStream)
                 Sections.Add(new DebateSection(reader, SectionValueCount));
         }
 
