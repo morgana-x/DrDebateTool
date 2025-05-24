@@ -7,7 +7,7 @@ namespace DrDebateBin
         {
             return short.Parse(str.Substring(str.IndexOf('|') + 1).Trim());
         }
-        public static string ValToString(object keyName, object val)// short val)
+        public static string ValToString(object keyName, object val)
         {
             return $"{keyName} | {val}";
         }

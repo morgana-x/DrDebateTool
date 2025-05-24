@@ -20,6 +20,7 @@
             foreach(var val in Values)
                 bw.Write(val);
         }
+
         public void WriteToString(StreamWriter bw)
         {
             for (int i = 0; i < Values.Count; i++)

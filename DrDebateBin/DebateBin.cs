@@ -1,6 +1,4 @@
-﻿using System.Reflection.Emit;
-
-namespace DrDebateBin
+﻿namespace DrDebateBin
 {
     public class DebateBin
     {
@@ -11,7 +9,11 @@ namespace DrDebateBin
         {
             UnknownHeaderValue = reader.ReadInt16();
      
-            ushort NumberOfSections = reader.ReadUInt16();
+            ushort NumberOfSections = reader.ReadUInt16(); 
+            // Small note to self: Sometimes rarely, the file claims to have more sections than it has?
+            // This can cause when repacking the number of sections value written to be lower by 1,
+            // hopefully doesn't affect ingame stuff?
+            // Otherwise will have to write the purported value to text file and read it from text file
 
             SectionValueCount = (int)((reader.BaseStream.Length-4) / NumberOfSections);
             SectionValueCount &= 0xFFFE; //https://github.com/AdmiralCurtiss/HyoutaTools/blob/master/HyoutaToolsLib/DanganRonpa/Nonstop/NonstopFile.cs
